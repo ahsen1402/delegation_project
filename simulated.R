@@ -6,18 +6,29 @@ library(latex2exp)
 library(pracma) 
 
 
-### The True Positive and False positive rates of human expert. 
-PTP=0.89
-PFP=0.1
+
+
+
+### The  False positive rates of human expert. 
+
+PFP=0.095491
+
+
+####  define cancer prevalance
+
+P1=126.9/10^5
+P0=1-P1
 
 
 ### Different costs associated 
 
 # algorithm cost per use
-Ca=5.96 
+## Change Ca and Cl for figures A B and C
+
+Ca=5.96 #5.96 low cost, 42.59 high cost
 
 ## liability cost
-Cl=756156
+Cl=756156 # low Cl 756156, high cl 1157866
 
 ## Cost of False positives 
 Cf=1918.18
@@ -29,8 +40,9 @@ Ce=167.04
 ## Define the search space I is a representative of algorithm performance
 ## alpha defines human TPR
 n=50
+
 alphas_all=seq(0, 1, length.out=n)
-Is_all=logspace(-0.5,0.5,n)#4*(6:n)/n
+Is_all=logspace(-0.5,0.5,n)
 
 
 df=data.frame(human_perf=numeric(),algorithm_perf=numeric(),
@@ -95,8 +107,9 @@ sp<-ggplot(df, aes(x=human_perf, y=algorithm_perf, shape=Strategy)) +
   scale_y_continuous(labels=scaleFUN)+
   geom_point()+
   theme_classic()+
-  scale_shape_manual(values=c(16, 3, 17))#+
-#theme(legend.position = c(0.2, 0.8))
+  scale_shape_manual(values=c(16, 3, 17))+
+theme(legend.position = c(0.2, 0.8))+
+  labs(shape = NULL)
+ 
 
 sp
-
