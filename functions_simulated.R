@@ -118,7 +118,7 @@ get_optimal_decision <- function(P0,P1,Ca,Ce,Cf,Cl,PTP,PFP,I){
     #   
     # }
     
-    
+  
     else if(dummy==0)
     {
       opt_dec="Delegation"
