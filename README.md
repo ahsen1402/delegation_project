@@ -1,7 +1,6 @@
 # Delegation
 
-This github repository contains the code used for the analysis of the paper "Human-AI Collaborative Decision Making for
-Screening Mammography" by Ahsen et. al. 
+This github repository contains the code used for the analysis of the paper "Economics of AI and Human Task Sharing for Decision Making in Screening Mammography" by Ahsen et. al. 
 We have used R programming language for this.
 
 ## Figure 1: Simulated/Synthetic Data
