@@ -1,0 +1,1 @@
+The R file named functions_simulated.R contains all the necessary functions and must be sourced. The file simulated.R includes the code used to generate Figure 1. This code also produces the synthetic data used to create the figure. These data files (Fig_1A.csv, Fig_1B.csv, Fig_1C.csv) are provided in this folder for your convenience.
